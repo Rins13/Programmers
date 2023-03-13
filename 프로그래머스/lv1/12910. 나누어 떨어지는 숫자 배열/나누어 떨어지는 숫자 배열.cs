@@ -1,0 +1,16 @@
+using System.Collections.Generic;
+using System.Linq;
+
+public class Solution {
+    public int[] solution(int[] arr, int divisor) {
+		List<int> answer = new List<int>();
+		foreach (int num in arr)
+			if (num % divisor == 0)
+				answer.Add(num);
+
+		if (answer.Count == 0)
+			answer.Add(-1);
+
+		return answer.OrderBy(x => x).ToArray();
+    }
+}
