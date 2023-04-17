@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 
 public class Solution {
-    public int solution(int number, int limit, int power) {
+    public int solution(int number, int limit, int power) 
+    {
 		int answer = 1;
 		// 소수
 		List<int> primes = new List<int>() { 2};
@@ -52,18 +53,18 @@ public class Solution {
     }
     
     static bool isPrime(int num)
-	{
-		int half = num / 2;
-		if (num % 2 == 1)
-			half++;
+    {
+	    int half = num / 2;
+	    if (num % 2 == 1)
+		    half++;
 
-		for (int i = 2; i < half; i++)
-		{
-			if (num % i == 0)
-				return false;
-		}
+	    for (int i = 2; i < half; i++)
+	    {
+		    if (num % i == 0)
+			    return false;
+	    }
 
-		return true;
-	}
+	    return true;
+    }
 
 }
